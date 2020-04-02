@@ -1,2 +1,2 @@
 # terraform-training
-Terraform Training
+Terraform Training. All examples use terraform12.
