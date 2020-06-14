@@ -1,14 +1,14 @@
 resource "aws_security_group" "mysg" {
-  name        = "my_sg"
-  description = "this is my sg"
-  vpc_id      = "vpc-e9532f90"
+  name        = var.sg_name
+  description = var.sg_description
+  vpc_id      = var.sg_vpc_id
 
   ingress {
     description = "SSH From my ip"
     from_port   = "22"
     to_port     = "22"
     protocol    = "tcp"
-    cidr_blocks = ["67.173.153.202/32"]
+    cidr_blocks = [var.ip]
   }
 
   egress {
@@ -19,7 +19,7 @@ resource "aws_security_group" "mysg" {
   }
 
   tags = {
-    Name = "mysg"
+    Name = var.sg_name
   }
 
 }
