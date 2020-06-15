@@ -23,3 +23,8 @@ variable "sg_vpc_id" {
 variable "sg_description" {
   default = "this is my sg"
 }
+
+variable "instancecount" {
+  type    = number
+  default = 1
+}
