@@ -3,4 +3,7 @@ resource aws_instance myec2instance {
   instance_type          = var.instancetype
   vpc_security_group_ids = [aws_security_group.mysg.id]
   count                  = var.instancecount
+  tags = {
+    Name = "HelloWorld-${count.index}"
+  }
 }
