@@ -11,6 +11,16 @@ variable "instancetype" {
   default = "t2.micro"
 }
 
+variable "istest" {
+  default = "false"
+  type    = bool
+}
+
+variable "instancecount" {
+  type    = number
+  default = 1
+}
+
 //Variabls for Security Group
 variable "sg_name" {
   default = "mysg"
@@ -22,9 +32,4 @@ variable "sg_vpc_id" {
 
 variable "sg_description" {
   default = "this is my sg"
-}
-
-variable "instancecount" {
-  type    = number
-  default = 1
 }
